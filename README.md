@@ -15,7 +15,7 @@ Win+Run with (extremely) shortened names.
 4. Rename `linkmaintenance.example` to `linkmaintenance`
 5. `Set-ExecutionPolicy RemoteSigned && addPath.ps1 && do.ps1` and enter
 
-Later, you can put more lnk files in `linkmaintenance` and run do.ps1 again
+Later, you can put more lnk files in `linkmaintenance` and add to `linkmaintenance\rules\rules.txt` and run `do.ps1` again
 
 ## Installation
 
