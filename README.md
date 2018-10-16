@@ -10,12 +10,13 @@ Win+Run with (extremely) shortened names.
 ## Installation (Extremely Fast to Create Minimal Runnable)
 
 1. Download the [zip archieve](https://github.com/no1xsyzy/winrunner/archive/master.zip) and unzip
-2. Open PowerShell with Administrator
-3. Goto the unzipped folder
-4. Rename `linkmaintenance.example` to `linkmaintenance`
-5. `Set-ExecutionPolicy RemoteSigned && addPath.ps1 && do.ps1` and enter
+2. Goto the unzipped folder
+3. Rename `linkmaintenance.example` to `linkmaintenance`
+4. Open PowerShell with Administrator
+5. `cd` to the unzipped folder
+6. Type `Set-ExecutionPolicy RemoteSigned; .\addPath.ps1; .\do.ps1` and enter
 
-Later, you can put more lnk files in `linkmaintenance` and add to `linkmaintenance\rules\rules.txt` and run `do.ps1` again
+Later, you can put more lnk files in `linkmaintenance` and add to `linkmaintenance\rules\rules.txt` and run `.\do.ps1` again.
 
 ## Installation
 
@@ -33,11 +34,11 @@ Later, you can put more lnk files in `linkmaintenance` and add to `linkmaintenan
     1. Open PowerShell with Administrator
     2. Type `Set-ExecutionPolicy RemoteSigned` and enter.
 6. Add the path configured as `to` in environment `path`. Two ways:
-    1. Run `addPath.ps1` as Administrator
+    1. Run `.\addPath.ps1` as Administrator
     2. Edit with System Properties dialog
-7. Run `do.ps1`
+7. Run `.\do.ps1`
 8. Enjoy the amazing speed
-9. You can put more lnk files and run `do.ps1` again (Administrator not required if `to` is not in critical path)
+9. You can put more lnk files and run `.\do.ps1` again (Administrator not required if `to` is not in critical path)
 
 ## Rule File
 
@@ -47,9 +48,11 @@ The core rule file is the main entry of all rule files is required in it.
 
 ### Syntax of Rule Files
 
-* `~` will change the source destination (relative to current destination). It will persist in one file.
+* `~` will change the source destination (relative to current destination). It will persist in this file and later included files.
 * `!` will include another file.
 * otherwise, `|` will split shortened name and long name. It is possible to add several shortened name splitted with `;`
+
+See [files in linkmaintenance.example/rules](linkmaintenance.example/rules) for example
 
 ## Contributing
 
